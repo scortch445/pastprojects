@@ -1,0 +1,170 @@
+<head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <script type="text/javascript">
+        var clicked=function clicked() {
+            //Getting to know Player skills
+var Profile = {
+    strength: prompt("First off let's get to know you, are you strong?").toUpperCase(),
+    intelligence: prompt("Ok, now are you smart?").toUpperCase(),
+    speed: prompt("Now, are you fast?").toUpperCase(),
+    knowBuilding: prompt("Do you know a lot about where you live?").toUpperCase()
+}
+
+
+var user = prompt("The CIA are after you, what do you do(JUMP out the window, RUN down the steps, FIGHT them off, or HIDE)").toUpperCase();
+
+switch(user){
+    
+    //If jump out Window
+    case 'JUMP':
+        var jump = prompt("You jump out the window and land on a roof. Do you HOP down from the building, or JUMP to the next roof top?").toUpperCase();
+        switch(jump) {
+            case "JUMP":
+                    if(Profile.speed === 'YES' || Profile.strength === 'YES') {
+                        alert("You easily jump across and there's a helicopter there and you fly away!")
+                    } else {
+                        alert("You don't got hops and the CIA get to you") }
+                    break;
+            
+            case "HOP":
+                    alert("You take too much time and the CIA get to you")
+                    break;
+            
+            default:
+                alert("You take too much time and the CIA get to you")
+        }
+        break;
+    
+    
+    //If run down steps
+    case 'RUN':
+        if(Profile.speed ==='YES' || Profile.knowBuilding === 'YES'){
+            var run = prompt("You make it out the building safely, do you RUN down the street or GO into the building next to you?").toUpperCase();
+            switch(run){
+                case 'GO':
+                    alert("You get inside and it turns out that the CIA are waiting for you!");
+                    break;
+                case 'RUN':
+                    alert("You find a car you can break into, and drive away!");
+                    break;
+                default:
+                    alert("Thats not an option!")
+            }
+        } else{
+            alert("You took too much time to escape!");
+        }
+        break;
+    
+    
+    //If you choose fight
+    case 'FIGHT':
+            if(Profile.strength === 'YES' || Profile.intelligence === 'YES'){
+                var fight = prompt("You beat them up, do you TAKE their guns or RUN out?").toUpperCase();
+                switch(fight){
+                    case 'TAKE':
+                        var aim = prompt("You take their guns and run down the stairs where the CIA are waiting, are you an accurate shot?(YES OR NO)").toUpperCase();
+                        switch(aim){
+                            case 'YES':
+                                alert("You easiy pick them off,  and you find some car keys and drive away");
+                                break;
+                            default:
+                                alert("They shoot you in the head and you die quick and painlessly")
+                        }
+                        break;
+                    case 'RUN':
+                        alert("You run outside and the CIA are waiting there!");
+                        break;
+                    default:
+                        alert("More CIA come and get to you!");
+                }
+            }
+        break;
+    
+    
+    //If you choose to hide
+    case 'HIDE':
+            var hide = prompt("You look around for hiding places, there is a DESK, CLOSET, and another ROOM").toUpperCase();
+            switch(hide){
+                case 'DESK':
+                    alert("You hide under the desk and they don't find you. They leave you and you get away");
+                    break;
+                case 'CLOSET':
+                    alert("You hide in the closet and they find you and beat you up!");
+                    break;
+                case 'ROOM':
+                    var room = prompt("You run into the room and see a CABNIT, and DESK to hide in, or you can CLIMB out the window").toUpperCase();
+                    switch(room){
+                        case 'CABNIT':
+                            alert("You get in the cabnit and they never see you, and you safely get home!");
+                            break;
+                        case 'DESK':
+                            alert("You hide under the desk and they find you!");
+                            break;
+                        case 'CLIMB':
+                            if(Profile.strength === 'YES'){
+                                var alley = prompt("You use your parkour moves and scale down the wall to an alleyway.  There is two directions, you can either HEAD down the alley, or head to the STREET").toUpperCase();
+                                switch(alley){
+                                    case 'HEAD':
+                                        alert("You start heading deeper into the alley and make a turn to a dead end.  Your now in handcuffs")
+                                        break;
+                                    case 'STREET':
+                                        if(Profile.Intellegince === 'YES'){
+                                            alert("You hot wire a motorcycle and drive away in style")}
+                                        else{
+                                            console.log("You find a motorcycle but you have no idea how to hotwire it and the CIA get to you")}
+                                        break;
+                                    default:
+                                        alert("You take too much time to think and they catch up to you!")
+                                }
+                            }
+                            else{
+                                alert("Your a wimp and fall to your death")}
+                            break;
+                        default:
+                            alert("Thats not an option!")
+                    }
+            }
+        break;
+    
+    default:
+        alert(user+" is not a choice I gave you")
+    
+}  
+            }
+    </script>
+    <title>CIA Game</title>
+</head>
+<body>
+    <div class="header">
+        <div id="navBar">
+            <ul class="ul1">
+                <li class="li1">Home</li>
+                <li class="li1">About</li>
+                <li class="li1">Creation</li>
+            </ul>
+        </div>
+    </div>
+    <div class="left">
+        <p id="facts">Facts</p>
+        <ul>
+            <li class="li2">Learned from codecademy</li>
+            <li class="li2">Used JavaScript for game functionality</li>
+            <li class="li2">Made from Brackets by Adobe Inc.</li>
+            <li class="li2">Last updated 10/15/15</li>
+        </ul>
+    </div>
+    <div class="left" id="support">
+        <p><strong>Support:</strong></p>
+        <p>Sorry guys but there is no support yet for this website and I'm not planning on taking donations. But you can support me over at my youtube channel, and check out the left hand side for more information.</p>
+    </div>
+    <div class="right" id="youtube">
+        <p><strong>Youtube:</strong></p>
+        <p>Hello guys and I do have a youtube channel for you to check out: <a href="https://www.youtube.com/channel/UCzjNrw6vYsYOMlFaynJwNgg">My Channel</a> I haven't been posting too often but i'm hoping to change that</p>
+    </div>
+    <input type="button" value="Start Game" onclick="clicked()"/>
+    <div class="underbutton">
+        <p><strong>News Now:</strong><p>
+        <p>I'm going on a trip to New York for six days, and I might not get to work on this website for a couple of days but I asure you that when I get back I will work on this continuesly. <p>
+        <p>-The Best Developer Ever</p>
+    </div>
+</body>

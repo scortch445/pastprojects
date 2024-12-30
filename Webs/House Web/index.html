@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'>
+        </script>
+        <script type='text/javascript'>
+$(document).ready(function() {
+   $('.toolbar').mouseenter(function() {
+       $(this).animate({
+           paddingTop: '+=5px',
+           marginTop: '-=5px'
+       }, 500);
+       
+   });
+   $('.toolbar').mouseleave(function() {
+       $(this).animate({
+           paddingTop: '-=5px',
+           marginTop: '+=5px'
+       }, 500);
+   });
+});
+        </script>
+    </head>
+    <body>
+        
+        <div id="toolbar">
+            <a href="http://www.maxgames.com"><div class="toolbar" id="red"><p id="p">Home</p></div></a>
+            <a href="http://www.notdoppler.com"><div class="toolbar" id="blue"><p id="p">About</p></div></a>
+            <a href="http://www.armourgames.com"><div class="toolbar" id="yellow"><p id="p">Reviews</p></div>  
+            </a>
+            <a href="http://www.addictinggames.com"><div class="toolbar" id="green"><p id="p">Contact</p></div>
+            </a>
+        </div>
+        <img id="house" src="https://homeinnovation.files.wordpress.com/2012/05/wpid-futuristic-dream-house-decor-ideas-585x467.jpg" />
+        <div id="sidebar">
+            <p id="title"><strong>My House is:</strong></p>
+            <ul>
+                <li>Awesome</li>
+                <li>Cool</li>
+                <li>Fantastic</li>
+                <li>Futuristic</li>
+                <li>Amazing</li>
+                <li>Huge</li>
+                <li>Spacious</li>
+                <li>Relaxing</li>
+                <li>Warm</li>
+                <li>Cozy</li>
+                <li>Marvelous</li>
+                <li>Creative</li>
+                <li>Unique</li>
+                <li>Sleak</li>
+                <li>Clean</li>
+                <li>Hidden</li>
+                <li>Radical</li>
+                <li>Pretty Dope</li>
+                <li>Real</li>
+                <li>Totaly Mine</li>
+            </ul>
+        </div>
+    </body>
+</html>

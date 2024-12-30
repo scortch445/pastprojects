@@ -1,0 +1,62 @@
+.toolbar {
+    height:40px;
+    width:100px;
+    display: inline-block;
+    margin-top: 7px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+#p {
+    margin-top: 12px;
+}
+
+.toolbar:hover {
+    background-color: dodgerblue;
+}
+
+.toolbar:first-child {
+    margin-left: 3px;
+}
+
+#toolbar{
+    height: 55px;
+    width: 428px;
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    margin-left: -214px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#house {
+    position: absolute;
+    top: 80px;
+    left: 25px;
+    box-shadow: rgba(0,0,0,0.2) 15px 15px
+}
+
+#sidebar {
+    position: absolute;
+    top: 80px;
+    left: 700px;
+    height: 450px;
+    width: 200px;
+    background-color: aqua;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 5px
+}
+#title {
+    margin-left: 15px;
+    font-size: 20px
+}
+ul {
+    margin-left: 20px
+}
